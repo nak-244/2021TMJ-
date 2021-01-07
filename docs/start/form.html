@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>【スタートアップ】スタッフモチベーションアンケート</title>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <style type="text/css">
+    .bs-component+.bs-component {
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .bs-docs-section {
+        margin-top: 8em;
+      }
+
+      .bs-component {
+        position: relative;
+      }
+
+      .bs-component .modal {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        z-index: 1;
+        display: block;
+      }
+
+      .bs-component .modal-dialog {
+        width: 90%;
+      }
+
+      .bs-component .popover {
+        position: relative;
+        display: inline-block;
+        width: 220px;
+        margin: 20px;
+      }
+
+      .nav-tabs {
+        margin-bottom: 15px;
+      }
+
+      .progress {
+        margin-bottom: 10px;
+      }
+    }
+
+    p {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .custom-control {
+      margin-top: 0.7rem;
+      margin-bottom: 0.7rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <div class="container">
+        <p class="text-light">【スタートアップ】スタッフモチベーション アンケート</p>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <div class="page-header" id="banner">
+      <div class="row my-4">
+        <div class="col-12">
+          <p class="lead">いつも業務お疲れさまです。</p>
+          <p class="lead">このアンケートは、弊社でご就業いただきまして１ヶ月経過したスタッフの皆様を対象に実施しております。</p>
+          <p class="lead">ご記入頂いた情報は、今後皆様への　①勤務環境②フォロー体制③研修　等のサービス向上のために使用させていただきますので、是非ともご協力ください。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 就業先（現場）に関する質問
+  ================================================== -->
+    <section class="bs-docs-section">
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h4 id="forms">就業先（現場）に関する質問</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">1、業務内容について</div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="1a" name="1、業務内容について" class="custom-control-input">
+                  <label class="custom-control-label" for="1a">想像していたより難しくなかった</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="1b" name="1、業務内容について" class="custom-control-input">
+                  <label class="custom-control-label" for="1b">想像していたとおり</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="1c" name="1、業務内容について" class="custom-control-input">
+                  <label class="custom-control-label" for="1c">想像以上に難しい</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">2、研修内容について</div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2a" name="2、研修内容について" class="custom-control-input">
+                  <label class="custom-control-label" for="2a">理解しやすい</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2b" name="2、研修内容について" class="custom-control-input">
+                  <label class="custom-control-label" for="2b">普通</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2c" name="2、研修内容について" class="custom-control-input">
+                  <label class="custom-control-label" for="2c">理解しにくい</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">3、研修の進行具合（スピード）について</div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="3a" name="3、研修の進行具合（スピード）について" class="custom-control-input">
+                  <label class="custom-control-label" for="3a">速すぎる</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="3b" name="3、研修の進行具合（スピード）について" class="custom-control-input">
+                  <label class="custom-control-label" for="3b">少し早い</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="3c" name="3、研修の進行具合（スピード）について" class="custom-control-input">
+                  <label class="custom-control-label" for="3c">ちょうど良い</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="3d" name="3、研修の進行具合（スピード）について" class="custom-control-input">
+                  <label class="custom-control-label" for="3d">少し遅い</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="3e" name="3、研修の進行具合（スピード）について" class="custom-control-input">
+                  <label class="custom-control-label" for="3e">遅すぎる</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">4、質問のしやすさについて</div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="4a" name="4、質問のしやすさについて" class="custom-control-input">
+                  <label class="custom-control-label" for="4a">質問しやすい環境である</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="4b" name="4、質問のしやすさについて" class="custom-control-input">
+                  <label class="custom-control-label" for="4b">質問しにくい雰囲気</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="4c" name="4、質問のしやすさについて" class="custom-control-input">
+                  <label class="custom-control-label" for="4c">質問の機会がなくて困る</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">5、フィードバックについて</div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="5a" name="5、フィードバックについて" class="custom-control-input">
+                  <label class="custom-control-label" for="5a">個別に出来ている点、苦手な点をフィードバックしていただけている</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="5b" name="5、フィードバックについて" class="custom-control-input">
+                  <label class="custom-control-label" for="5b">細かくではないが個別にフィードバックをもらえている</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="5c" name="5、フィードバックについて" class="custom-control-input">
+                  <label class="custom-control-label" for="5c">フィードバックがほとんどなく評価がわからない</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="5d" name="5、フィードバックについて" class="custom-control-input">
+                  <label class="custom-control-label" for="5d">フィードバックしていただけているが指摘内容が納得できない</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">6、人間関係とコミュニケーションについて</div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="6a" name="6、人間関係とコミュニケーションについて" class="custom-control-input">
+                  <label class="custom-control-label" for="6a">非常に良い</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="6b" name="6、人間関係とコミュニケーションについて" class="custom-control-input">
+                  <label class="custom-control-label" for="6b">幅広くではないが取れている</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="6c" name="6、人間関係とコミュニケーションについて" class="custom-control-input">
+                  <label class="custom-control-label" for="6c">あまり取れていない</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="6d" name="6、人間関係とコミュニケーションについて" class="custom-control-input">
+                  <label class="custom-control-label" for="6d">まったく取れていない</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="6e" name="6、人間関係とコミュニケーションについて" class="custom-control-input">
+                  <label class="custom-control-label" for="6e">取れていないが必要ないと感じている</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">7、ご自身の研修内容の習得について</div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="7a" name="7、ご自身の研修内容の習得について" class="custom-control-input">
+                  <label class="custom-control-label" for="7a">自身を持って話せている</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="7b" name="7、ご自身の研修内容の習得について" class="custom-control-input">
+                  <label class="custom-control-label" for="7b">不安はあるが、それが相手に伝わるほどではない</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="7c" name="7、ご自身の研修内容の習得について" class="custom-control-input">
+                  <label class="custom-control-label" for="7c">不安が声に出てしまっており、相手に伝わっていると思う</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="7d" name="7、ご自身の研修内容の習得について" class="custom-control-input">
+                  <label class="custom-control-label" for="7d">不安だらけのトークでとてもデビューできないと思う</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">8、（不安があると思われている方）考えられる要因</div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="8a" name="8、（不安があると思われている方）考えられる要因" class="custom-control-input">
+                  <label class="custom-control-label" for="8a">研修で学んだ最低限の知識は理解しているが、緊張してしまって何を話せば良いかわからなくなる</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="8b" name="8、（不安があると思われている方）考えられる要因" class="custom-control-input">
+                  <label class="custom-control-label" for="8b">緊張はあまりしていないが、研修で学んだ知識があまり理解できていないのでうまく説明できない</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="8c" name="8、（不安があると思われている方）考えられる要因" class="custom-control-input">
+                  <label class="custom-control-label" for="8c">コールセンター経験がないのでどう話せば良いかがわからない</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="8d" name="8、（不安があると思われている方）考えられる要因" class="custom-control-input">
+                  <label class="custom-control-label" for="8d">その他</label>
+                </div>
+                <div class="form-group">
+                  <label for="8e">その他を選んだ方は理由を書いてください。</label>
+                  <textarea class="form-control" id="8e" rows="3" name="8、（不安があると思われている方）考えられる要因"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">9、全体的な職場環境について</div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="9a" name="9、全体的な職場環境について" class="custom-control-input">
+                  <label class="custom-control-label" for="9a">良い</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="9b" name="9、全体的な職場環境について" class="custom-control-input">
+                  <label class="custom-control-label" for="9b">普通</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="9c" name="9、全体的な職場環境について" class="custom-control-input">
+                  <label class="custom-control-label" for="9c">悪い</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="9d" name="9、全体的な職場環境について" class="custom-control-input">
+                  <label class="custom-control-label" for="9d">その他</label>
+                </div>
+                <div class="form-group">
+                  <label for="9e">その他を選んだ方は理由を書いてください。</label>
+                  <textarea class="form-control" id="9e" rows="3" name="9、全体的な職場環境について"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 弊社（支店）に関する質問
+  ================================================== -->
+    <section class="bs-docs-section">
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h4 id="forms">弊社（支店）に関する質問</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">1、就業開始までの弊社からの事前の案内や説明について</div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_1a" name="1、就業開始までの弊社からの事前の案内や説明について" class="custom-control-input">
+                  <label class="custom-control-label" for="2_1a">良い</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_1b" name="1、就業開始までの弊社からの事前の案内や説明について" class="custom-control-input">
+                  <label class="custom-control-label" for="2_1b">普通</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_1c" name="1、就業開始までの弊社からの事前の案内や説明について" class="custom-control-input">
+                  <label class="custom-control-label" for="2_1c">理解できていない</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_1d" name="1、就業開始までの弊社からの事前の案内や説明について" class="custom-control-input">
+                  <label class="custom-control-label" for="2_1d">その他</label>
+                </div>
+                <div class="form-group">
+                  <label for="2_1e">その他を選んだ方は理由を書いてください。</label>
+                  <textarea class="form-control" id="2_1e" rows="3" name="1、就業開始までの弊社からの事前の案内や説明について"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">2、就業開始してからの弊社のメールや電話対応について</div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_2a" name="2、就業開始してからの弊社のメールや電話対応について" class="custom-control-input">
+                  <label class="custom-control-label" for="2_2a">良い</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_2b" name="2、就業開始してからの弊社のメールや電話対応について" class="custom-control-input">
+                  <label class="custom-control-label" for="2_2b">普通</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_2c" name="2、就業開始してからの弊社のメールや電話対応について" class="custom-control-input">
+                  <label class="custom-control-label" for="2_2c">理解できていない</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_2d" name="2、就業開始してからの弊社のメールや電話対応について" class="custom-control-input">
+                  <label class="custom-control-label" for="2_2d">その他</label>
+                </div>
+                <div class="form-group">
+                  <label for="2_2e">その他を選んだ方は理由を書いてください。</label>
+                  <textarea class="form-control" id="2_2e" rows="3" name="2、就業開始してからの弊社のメールや電話対応について"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">3、弊社の対応全般について</div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_3a" name="3、弊社の対応全般について" class="custom-control-input">
+                  <label class="custom-control-label" for="2_3a">良い</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_3b" name="3、弊社の対応全般について" class="custom-control-input">
+                  <label class="custom-control-label" for="2_3b">普通</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_3c" name="3、弊社の対応全般について" class="custom-control-input">
+                  <label class="custom-control-label" for="2_3c">理解できていない</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_3d" name="3、弊社の対応全般について" class="custom-control-input">
+                  <label class="custom-control-label" for="2_3d">その他</label>
+                </div>
+                <div class="form-group">
+                  <label for="2_3e">その他を選んだ方は理由を書いてください。</label>
+                  <textarea class="form-control" id="2_3e" rows="3" name="3、弊社の対応全般について"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">4、総合満足度</div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_4a" name="4、総合満足度" class="custom-control-input">
+                  <label class="custom-control-label" for="2_4a">大変満足</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_4b" name="4、総合満足度" class="custom-control-input">
+                  <label class="custom-control-label" for="2_4b">やや満足</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_4c" name="4、総合満足度" class="custom-control-input">
+                  <label class="custom-control-label" for="2_4c">向いてないかもしれないがこの機会に続けたい</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="2_4d" name="4、総合満足度" class="custom-control-input">
+                  <label class="custom-control-label" for="2_4d">正直仕事が合わないので退職を考えている</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="card border-light mb-3">
+            <div class="card-header">5、自由意見・要望</div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="2_5a">お気づきのことがありましたらご記入ください。</label>
+                <textarea class="form-control" id="2_5a" rows="10" name="5、自由意見・要望"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- お礼・支店入力・お名前入力
+================================================== -->
+
+    <div class="row my-4">
+      <div class="col-12">
+        <p class="lead">ご協力ありがとうございました。</p>
+        <p class="lead">最後にご登録頂いてる支店名と、お名前をご入力ください。</p>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-lg-3">
+        <div class="bs-component">
+          <div class="form-group">
+            <label class="col-form-label">登録支店名</label>
+            <select class="custom-select">
+              <option selected>支店を選んでください</option>
+              <option value="1">○○支店</option>
+              <option value="2">▲▲支店</option>
+              <option value="3">××支店</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="bs-component">
+          <div class="form-group">
+            <label class="col-form-label" for="name">お名前</label>
+            <input type="text" class="form-control" placeholder="お名前を入力してください" id="name">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1">
+        <div class="bs-component">
+          <label class="col-form-label" for="inputDefault">&nbsp;</label><br />
+          <button type="submit" class="btn btn-lg btn-primary">送信する</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="small bg-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center copyright text-light py-2">
+          &copy; 2021 Open Loop Partners, INC.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="./js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    $('.bs-component [data-toggle="popover"]').popover();
+    $('.bs-component [data-toggle="tooltip"]').tooltip();
+  </script>
+</body>
+
+</html>
