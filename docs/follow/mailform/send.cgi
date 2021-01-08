@@ -101,7 +101,7 @@ $conf{'lang'} = 1;
 ##MAIN##################################################################
 ########################################################################
 ($sec,$min,$hour,$day,$mon,$year) = localtime(time);$mon++;$year += 1900;
-$posted_body = sprintf("%04d-%02d-%02d %02d:%02d:%02d\n\n",$year,$mon,$day,$hour,$min,$sec);
+# $posted_body = sprintf("%04d-%02d-%02d %02d:%02d:%02d\n\n",$year,$mon,$day,$hour,$min,$sec);
 $conf{'download_file_name'} = sprintf("%04d-%02d-%02d.csv",$year,$mon,$day,$hour,$min,$sec);
 push @field, "DATE";
 push @record, sprintf("%04d-%02d-%02d %02d:%02d:%02d",$year,$mon,$day,$hour,$min,$sec);
@@ -312,10 +312,10 @@ sub getQuery {
 	my($packed_addr) = pack("C4", $addr[0], $addr[1], $addr[2], $addr[3]);
 	my($name, $aliases, $addrtype, $length, @addrs);
 	($name, $aliases, $addrtype, $length, @addrs) = gethostbyaddr($packed_addr, 2);
-	$admin_posted_body .= "\n\n\[ HOST NAME \] ${name}\n";
-	$admin_posted_body .= "\[ IP ADDRESS \] $ENV{'REMOTE_ADDR'}\n";
-	$admin_posted_body .= "\[ USER AGENT \] $ENV{'HTTP_USER_AGENT'}\n";
-	$admin_posted_body .= "\[ HTTP REFERER \] $ENV{'HTTP_REFERER'}";
+#	$admin_posted_body .= "\n\n\[ HOST NAME \] ${name}\n";
+#	$admin_posted_body .= "\[ IP ADDRESS \] $ENV{'REMOTE_ADDR'}\n";
+#	$admin_posted_body .= "\[ USER AGENT \] $ENV{'HTTP_USER_AGENT'}\n";
+#	$admin_posted_body .= "\[ HTTP REFERER \] $ENV{'HTTP_REFERER'}";
 	$admin_posted_body = $posted_body . $admin_posted_body;
 	$conf{'res_body'} =~ s/<resbody>/$posted_body/g;
 	push @field,"HOST NAME";
