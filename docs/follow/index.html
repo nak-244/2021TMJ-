@@ -81,480 +81,484 @@
 
   <div class="container">
 
-    <div class="page-header" id="banner">
-      <div class="row my-4">
-        <div class="col-12">
-          <p class="lead">いつも業務お疲れさまです。</p>
-          <p class="lead">このアンケートは、弊社でご就業しているスタッフ皆様を対象に実施しております。</p>
-          <p class="lead">ご記入頂いた情報は、今後皆様への　①勤務環境　②フォロー体制　③研修　等のサービス向上のために使用させていただきますので、是非ともご協力ください。</p>
+    <form id="mailform" method="post" action="mailform/send.cgi" onsubmit="return sendmail(this);">
+
+      <div class="page-header" id="banner">
+        <div class="row my-4">
+          <div class="col-12">
+            <p class="lead">いつも業務お疲れさまです。</p>
+            <p class="lead">このアンケートは、弊社でご就業しているスタッフ皆様を対象に実施しております。</p>
+            <p class="lead">ご記入頂いた情報は、今後皆様への　①勤務環境　②フォロー体制　③研修　等のサービス向上のために使用させていただきますので、是非ともご協力ください。</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- 就業先（現場）に関する質問
+      <!-- 就業先（現場）に関する質問
   ================================================== -->
-    <section class="bs-docs-section">
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h4 id="forms">就業先（現場）に関する質問</h4>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">1、業務内容について</div>
-            <div class="card-body">
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="1a" name="1、業務内容について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="1a">想像していたより難しくなかった</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="1b" name="1、業務内容について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="1b">想像していたとおり</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="1c" name="1、業務内容について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="1c">想像以上に難しい</label>
-                </div>
-              </div>
+      <section class="bs-docs-section">
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h4 id="forms">就業先（現場）に関する質問</h4>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">2、業務量について</div>
-            <div class="card-body">
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2a" name="2、業務量について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2a">想像していたより少なかった</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2b" name="2、業務量について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2b">想像していたとおり</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2c" name="2、業務量について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2c">想像以上に多い</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2d" name="2、業務量について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2d">多すぎてどうにもならない</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">3、質問のしやすさについて</div>
-            <div class="card-body">
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="3a" name="3、質問のしやすさについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="3a">質問しやすい環境である</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="3b" name="3、質問のしやすさについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="3b">質問しにくい雰囲気</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="3c" name="3、質問のしやすさについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="3c">質問の機会がなくて困る</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">4、フィードバックについて</div>
-            <div class="card-body">
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="4a" name="4、フィードバックについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="4a">個別に出来ている点、苦手な点をフィードバックしていただけている</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="4b" name="4、フィードバックについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="4b">細かくではないが個別にフィードバックをもらえている</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="4c" name="4、フィードバックについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="4c">フィードバックがほとんどなく評価がわからない</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="4d" name="4、フィードバックについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="4d">フィードバックしていただけているが指摘内容が納得できない</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">5、人間関係とコミュニケーションについて</div>
-            <div class="card-body">
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="5a" name="5、人間関係とコミュニケーションについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="5a">非常に良い</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="5b" name="5、人間関係とコミュニケーションについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="5b">幅広くではないが取れている</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="5c" name="5、人間関係とコミュニケーションについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="5c">あまり取れていない</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="5d" name="5、人間関係とコミュニケーションについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="5d">まったく取れていない</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="5e" name="5、人間関係とコミュニケーションについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="5e">取れていないが必要ないと感じている</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">6、ご自身の業務の習得について</div>
-            <div class="card-body">
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="6a" name="6、ご自身の業務の習得について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="6a">自信を持って業務遂行している</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="6b" name="6、ご自身の業務の習得について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="6b">不安はあるが、業務遂行には支障がない</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="6c" name="6、ご自身の業務の習得について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="6c">不安で業務遂行に影響が出ており、多少なりとも周囲に迷惑をかけている</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="6d" name="6、ご自身の業務の習得について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="6d">不安で業務遂行出来ていないと思う</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">7、（不安があると思われている方）考えられる要因</div>
-            <div class="card-body">
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="7a" name="7、（不安があると思われている方）考えられる要因" class="custom-control-input">
-                  <label class="custom-control-label" for="7a">これまで学んだ業務知識は理解しているが、緊張してしまって何をすべきなのかわからない</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="7b" name="7、（不安があると思われている方）考えられる要因" class="custom-control-input">
-                  <label class="custom-control-label" for="7b">緊張はあまりしていないが、これまで学んだ業務知識があまり理解できていないので、うまく遂行できない</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="7c" name="7、（不安があると思われている方）考えられる要因" class="custom-control-input">
-                  <label class="custom-control-label" for="7c">業務がそもそも向いていないと感じている</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="7d" name="7、（不安があると思われている方）考えられる要因" class="custom-control-input">
-                  <label class="custom-control-label" for="7d">その他</label>
-                </div>
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">1、業務内容について</div>
+              <div class="card-body">
                 <div class="form-group">
-                  <label for="7e">その他を選んだ方は理由を書いてください。</label>
-                  <textarea class="form-control" id="7e" rows="3" name="7、（不安があると思われている方）考えられる要因"></textarea>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="1a" name="1、業務内容について(必須)" class="custom-control-input" value="1想像していたより難しくなかった">
+                    <label class="custom-control-label" for="1a">想像していたより難しくなかった</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="1b" name="1、業務内容について(必須)" class="custom-control-input" value="2想像していたとおり">
+                    <label class="custom-control-label" for="1b">想像していたとおり</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="1c" name="1、業務内容について(必須)" class="custom-control-input" value="3想像以上に難しい">
+                    <label class="custom-control-label" for="1c">想像以上に難しい</label>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">8、全体的な職場環境について</div>
-            <div class="card-body">
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="8a" name="8、全体的な職場環境について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="8a">良い</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="8b" name="8、全体的な職場環境について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="8b">普通</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="8c" name="8、全体的な職場環境について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="8c">悪い</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="8d" name="8、全体的な職場環境について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="8d">その他</label>
-                </div>
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">2、業務量について</div>
+              <div class="card-body">
                 <div class="form-group">
-                  <label for="8e">その他を選んだ方は理由を書いてください。</label>
-                  <textarea class="form-control" id="8e" rows="3" name="8、全体的な職場環境について"></textarea>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2a" name="2、業務量について(必須)" class="custom-control-input" value="1想像していたより少なかった">
+                    <label class="custom-control-label" for="2a">想像していたより少なかった</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2b" name="2、業務量について(必須)" class="custom-control-input" value="2想像していたとおり">
+                    <label class="custom-control-label" for="2b">想像していたとおり</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2c" name="2、業務量について(必須)" class="custom-control-input" value="3想像以上に多い">
+                    <label class="custom-control-label" for="2c">想像以上に多い</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2d" name="2、業務量について(必須)" class="custom-control-input" value="4多すぎてどうにもならない">
+                    <label class="custom-control-label" for="2d">多すぎてどうにもならない</label>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">9、現在の業務の継続について</div>
-            <div class="card-body">
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="9a" name="9、現在の業務の継続について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="9a">継続できるなら、是非継続したい</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="9b" name="9、現在の業務の継続について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="9b">依頼されるなら継続する</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="9c" name="9、現在の業務の継続について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="9c">継続を依頼されても迷ってしまう</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="9d" name="9、現在の業務の継続について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="9d">継続するつもりはない</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="9e" name="9、現在の業務の継続について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="9e">今すぐ辞めることを考えている</label>
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">3、質問のしやすさについて</div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="3a" name="3、質問のしやすさについて(必須)" class="custom-control-input" value="1質問しやすい環境である">
+                    <label class="custom-control-label" for="3a">質問しやすい環境である</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="3b" name="3、質問のしやすさについて(必須)" class="custom-control-input" value="2質問しにくい雰囲気">
+                    <label class="custom-control-label" for="3b">質問しにくい雰囲気</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="3c" name="3、質問のしやすさについて(必須)" class="custom-control-input" value="3質問の機会がなくて困る">
+                    <label class="custom-control-label" for="3c">質問の機会がなくて困る</label>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-    </section>
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">4、フィードバックについて</div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="4a" name="4、フィードバックについて(必須)" class="custom-control-input" value="1個別に出来ている点、苦手な点をフィードバックしていただけている">
+                    <label class="custom-control-label" for="4a">個別に出来ている点、苦手な点をフィードバックしていただけている</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="4b" name="4、フィードバックについて(必須)" class="custom-control-input" value="2細かくではないが個別にフィードバックをもらえている">
+                    <label class="custom-control-label" for="4b">細かくではないが個別にフィードバックをもらえている</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="4c" name="4、フィードバックについて(必須)" class="custom-control-input" value="3フィードバックがほとんどなく評価がわからない">
+                    <label class="custom-control-label" for="4c">フィードバックがほとんどなく評価がわからない</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="4d" name="4、フィードバックについて(必須)" class="custom-control-input" value="4フィードバックしていただけているが指摘内容が納得できない">
+                    <label class="custom-control-label" for="4d">フィードバックしていただけているが指摘内容が納得できない</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <!-- 弊社（支店）に関する質問
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">5、人間関係とコミュニケーションについて</div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="5a" name="5、人間関係とコミュニケーションについて(必須)" class="custom-control-input" value="1非常に良い">
+                    <label class="custom-control-label" for="5a">非常に良い</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="5b" name="5、人間関係とコミュニケーションについて(必須)" class="custom-control-input" value="2幅広くではないが取れている">
+                    <label class="custom-control-label" for="5b">幅広くではないが取れている</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="5c" name="5、人間関係とコミュニケーションについて(必須)" class="custom-control-input" value="3あまり取れていない">
+                    <label class="custom-control-label" for="5c">あまり取れていない</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="5d" name="5、人間関係とコミュニケーションについて(必須)" class="custom-control-input" value="4まったく取れていない">
+                    <label class="custom-control-label" for="5d">まったく取れていない</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="5e" name="5、人間関係とコミュニケーションについて(必須)" class="custom-control-input" value="5取れていないが必要ないと感じている">
+                    <label class="custom-control-label" for="5e">取れていないが必要ないと感じている</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">6、ご自身の業務の習得について</div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="6a" name="6、ご自身の業務の習得について(必須)" class="custom-control-input" value="1自信を持って業務遂行している">
+                    <label class="custom-control-label" for="6a">自信を持って業務遂行している</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="6b" name="6、ご自身の業務の習得について(必須)" class="custom-control-input" value="2不安はあるが、業務遂行には支障がない">
+                    <label class="custom-control-label" for="6b">不安はあるが、業務遂行には支障がない</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="6c" name="6、ご自身の業務の習得について(必須)" class="custom-control-input" value="3不安で業務遂行に影響が出ており、多少なりとも周囲に迷惑をかけている">
+                    <label class="custom-control-label" for="6c">不安で業務遂行に影響が出ており、多少なりとも周囲に迷惑をかけている</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="6d" name="6、ご自身の業務の習得について(必須)" class="custom-control-input" value="4不安で業務遂行出来ていないと思う">
+                    <label class="custom-control-label" for="6d">不安で業務遂行出来ていないと思う</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">7、（不安があると思われている方）考えられる要因</div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="7a" name="7、（不安があると思われている方）考えられる要因" class="custom-control-input" value="1これまで学んだ業務知識は理解しているが、緊張してしまって何をすべきなのかわからない">
+                    <label class="custom-control-label" for="7a">これまで学んだ業務知識は理解しているが、緊張してしまって何をすべきなのかわからない</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="7b" name="7、（不安があると思われている方）考えられる要因" class="custom-control-input" value="2緊張はあまりしていないが、これまで学んだ業務知識があまり理解できていないので、うまく遂行できない">
+                    <label class="custom-control-label" for="7b">緊張はあまりしていないが、これまで学んだ業務知識があまり理解できていないので、うまく遂行できない</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="7c" name="7、（不安があると思われている方）考えられる要因" class="custom-control-input" value="3業務がそもそも向いていないと感じている">
+                    <label class="custom-control-label" for="7c">業務がそもそも向いていないと感じている</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="7d" name="7、（不安があると思われている方）考えられる要因" class="custom-control-input" value="4その他">
+                    <label class="custom-control-label" for="7d">その他</label>
+                  </div>
+                  <div class="form-group">
+                    <label for="7e">その他を選んだ方は理由を書いてください。</label>
+                    <textarea class="form-control" id="7e" rows="3" name="7、（不安があると思われている方）考えられる要因"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">8、全体的な職場環境について</div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="8a" name="8、全体的な職場環境について(必須)" class="custom-control-input" value="1良い">
+                    <label class="custom-control-label" for="8a">良い</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="8b" name="8、全体的な職場環境について(必須)" class="custom-control-input" value="2普通">
+                    <label class="custom-control-label" for="8b">普通</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="8c" name="8、全体的な職場環境について(必須)" class="custom-control-input" value="3悪い">
+                    <label class="custom-control-label" for="8c">悪い</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="8d" name="8、全体的な職場環境について(必須)" class="custom-control-input" value="4その他">
+                    <label class="custom-control-label" for="8d">その他</label>
+                  </div>
+                  <div class="form-group">
+                    <label for="8e">その他を選んだ方は理由を書いてください。</label>
+                    <textarea class="form-control" id="8e" rows="3" name="8、全体的な職場環境について"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">9、現在の業務の継続について</div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="9a" name="9、現在の業務の継続について(必須)" class="custom-control-input" value="1継続できるなら、是非継続したい">
+                    <label class="custom-control-label" for="9a">継続できるなら、是非継続したい</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="9b" name="9、現在の業務の継続について(必須)" class="custom-control-input" value="2依頼されるなら継続する">
+                    <label class="custom-control-label" for="9b">依頼されるなら継続する</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="9c" name="9、現在の業務の継続について(必須)" class="custom-control-input" value="3継続を依頼されても迷ってしまう">
+                    <label class="custom-control-label" for="9c">継続を依頼されても迷ってしまう</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="9d" name="9、現在の業務の継続について(必須)" class="custom-control-input" value="4継続するつもりはない">
+                    <label class="custom-control-label" for="9d">継続するつもりはない</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="9e" name="9、現在の業務の継続について(必須)" class="custom-control-input" value="5今すぐ辞めることを考えている">
+                    <label class="custom-control-label" for="9e">今すぐ辞めることを考えている</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 弊社（支店）に関する質問
   ================================================== -->
-    <section class="bs-docs-section">
+      <section class="bs-docs-section">
 
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h4 id="forms">弊社（支店）に関する質問</h4>
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h4 id="forms">弊社（支店）に関する質問</h4>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">1、就業開始してからの弊社のメールや電話対応について</div>
-            <div class="card-body">
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_1a" name="1、就業開始してからの弊社のメールや電話対応について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_1a">良い</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_1b" name="1、就業開始してからの弊社のメールや電話対応について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_1b">普通</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_1c" name="1、就業開始してからの弊社のメールや電話対応について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_1c">悪い</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_1d" name="1、就業開始してからの弊社のメールや電話対応について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_1d">その他</label>
-                </div>
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">1、就業開始してからの弊社のメールや電話対応について</div>
+              <div class="card-body">
                 <div class="form-group">
-                  <label for="2_1e">その他を選んだ方は理由を書いてください。</label>
-                  <textarea class="form-control" id="2_1e" rows="3" name="1、就業開始してからの弊社のメールや電話対応について"></textarea>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_1a" name="1、就業開始してからの弊社のメールや電話対応について(必須)" class="custom-control-input" value="1良い">
+                    <label class="custom-control-label" for="2_1a">良い</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_1b" name="1、就業開始してからの弊社のメールや電話対応について(必須)" class="custom-control-input" value="2普通">
+                    <label class="custom-control-label" for="2_1b">普通</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_1c" name="1、就業開始してからの弊社のメールや電話対応について(必須)" class="custom-control-input" value="3悪い">
+                    <label class="custom-control-label" for="2_1c">悪い</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_1d" name="1、就業開始してからの弊社のメールや電話対応について(必須)" class="custom-control-input" value="4その他">
+                    <label class="custom-control-label" for="2_1d">その他</label>
+                  </div>
+                  <div class="form-group">
+                    <label for="2_1e">その他を選んだ方は理由を書いてください。</label>
+                    <textarea class="form-control" id="2_1e" rows="3" name="1、就業開始してからの弊社のメールや電話対応について"></textarea>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">2、弊社の営業担当・コーディネーターについて</div>
-            <div class="card-body">
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_2a" name="2、弊社の営業担当・コーディネーターについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_2a">定期的にフォローや面談があり、良いと感じる</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_2b" name="2、弊社の営業担当・コーディネーターについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_2b">フォローや面談は少ないが、おおむね良い印象である</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_2c" name="2、弊社の営業担当・コーディネーターについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_2c">就業するうえで、最低限のフォローは受けており、悪い印象はない</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_2d" name="2、弊社の営業担当・コーディネーターについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_2d">最初からフォローなど期待していないので、何とも思わない</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_2e" name="2、弊社の営業担当・コーディネーターについて(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_2e">フォロー以前に、信頼すらしていないので、関わりたくない</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">3、弊社の対応全般について</div>
-            <div class="card-body">
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_3a" name="3、弊社の対応全般について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_3a">良い</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_3b" name="3、弊社の対応全般について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_3b">普通</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_3c" name="3、弊社の対応全般について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_3c">悪い</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_3d" name="3、弊社の対応全般について(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_3d">その他</label>
-                </div>
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">2、弊社の営業担当・コーディネーターについて</div>
+              <div class="card-body">
                 <div class="form-group">
-                  <label for="2_3e">その他を選んだ方は理由を書いてください。</label>
-                  <textarea class="form-control" id="2_3e" rows="3" name="3、弊社の対応全般について"></textarea>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_2a" name="2、弊社の営業担当・コーディネーターについて(必須)" class="custom-control-input" value="1定期的にフォローや面談があり、良いと感じる">
+                    <label class="custom-control-label" for="2_2a">定期的にフォローや面談があり、良いと感じる</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_2b" name="2、弊社の営業担当・コーディネーターについて(必須)" class="custom-control-input" value="2フォローや面談は少ないが、おおむね良い印象である">
+                    <label class="custom-control-label" for="2_2b">フォローや面談は少ないが、おおむね良い印象である</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_2c" name="2、弊社の営業担当・コーディネーターについて(必須)" class="custom-control-input" value="3就業するうえで、最低限のフォローは受けており、悪い印象はない">
+                    <label class="custom-control-label" for="2_2c">就業するうえで、最低限のフォローは受けており、悪い印象はない</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_2d" name="2、弊社の営業担当・コーディネーターについて(必須)" class="custom-control-input" value="4最初からフォローなど期待していないので、何とも思わない">
+                    <label class="custom-control-label" for="2_2d">最初からフォローなど期待していないので、何とも思わない</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_2e" name="2、弊社の営業担当・コーディネーターについて(必須)" class="custom-control-input" value="5フォロー以前に、信頼すらしていないので、関わりたくない">
+                    <label class="custom-control-label" for="2_2e">フォロー以前に、信頼すらしていないので、関わりたくない</label>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">4、総合満足度</div>
-            <div class="card-body">
-              <div class="form-group">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_4a" name="4、総合満足度(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_4a">たいへん満足</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_4b" name="4、総合満足度(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_4b">やや満足</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_4c" name="4、総合満足度(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_4c">普通</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="2_4d" name="4、総合満足度(必須)" class="custom-control-input">
-                  <label class="custom-control-label" for="2_4d">悪い</label>
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">3、弊社の対応全般について</div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_3a" name="3、弊社の対応全般について(必須)" class="custom-control-input" value="1良い">
+                    <label class="custom-control-label" for="2_3a">良い</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_3b" name="3、弊社の対応全般について(必須)" class="custom-control-input" value="2普通">
+                    <label class="custom-control-label" for="2_3b">普通</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_3c" name="3、弊社の対応全般について(必須)" class="custom-control-input" value="3悪い">
+                    <label class="custom-control-label" for="2_3c">悪い</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_3d" name="3、弊社の対応全般について(必須)" class="custom-control-input" value="4その他">
+                    <label class="custom-control-label" for="2_3d">その他</label>
+                  </div>
+                  <div class="form-group">
+                    <label for="2_3e">その他を選んだ方は理由を書いてください。</label>
+                    <textarea class="form-control" id="2_3e" rows="3" name="3、弊社の対応全般について"></textarea>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row mb-3">
-        <div class="col-lg-12">
-          <div class="card border-light mb-3">
-            <div class="card-header">5、自由意見・要望</div>
-            <div class="card-body">
-              <div class="form-group">
-                <label for="2_5a">お気づきのことがありましたらご記入ください。</label>
-                <textarea class="form-control" id="2_5a" rows="10" name="5、自由意見・要望"></textarea>
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">4、総合満足度</div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_4a" name="4、総合満足度(必須)" class="custom-control-input" value="1たいへん満足">
+                    <label class="custom-control-label" for="2_4a">たいへん満足</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_4b" name="4、総合満足度(必須)" class="custom-control-input" value="2やや満足">
+                    <label class="custom-control-label" for="2_4b">やや満足</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_4c" name="4、総合満足度(必須)" class="custom-control-input" value="3普通">
+                    <label class="custom-control-label" for="2_4c">普通</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="2_4d" name="4、総合満足度(必須)" class="custom-control-input" value="4悪い">
+                    <label class="custom-control-label" for="2_4d">悪い</label>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-    </section>
+        <div class="row mb-3">
+          <div class="col-lg-12">
+            <div class="card border-light mb-3">
+              <div class="card-header">5、自由意見・要望</div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="2_5a">お気づきのことがありましたらご記入ください。</label>
+                  <textarea class="form-control" id="2_5a" rows="10" name="5、自由意見・要望"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <!-- お礼・支店入力・お名前入力
+      </section>
+
+      <!-- お礼・支店入力・お名前入力
 ================================================== -->
 
-    <div class="row my-4">
-      <div class="col-12">
-        <p class="lead">ご協力ありがとうございました。</p>
-        <p class="lead">最後にご登録頂いてる支店名と、お名前をご入力ください。</p>
+      <div class="row my-4">
+        <div class="col-12">
+          <p class="lead">ご協力ありがとうございました。</p>
+          <p class="lead">最後にご登録頂いてる支店名と、お名前をご入力ください。</p>
+        </div>
       </div>
-    </div>
 
-    <div class="row mb-5">
-      <div class="col-lg-3">
-        <div class="bs-component">
-          <div class="form-group">
-            <label class="col-form-label">登録支店名</label>
-            <select class="custom-select" name="登録支店名(必須)" >
-              <option selected>支店を選んでください</option>
-              <option value="1">○○支店</option>
-              <option value="2">▲▲支店</option>
-              <option value="3">××支店</option>
-            </select>
+      <div class="row mb-5">
+        <div class="col-lg-3">
+          <div class="bs-component">
+            <div class="form-group">
+              <label class="col-form-label">登録支店名</label>
+              <select class="custom-select" name="登録支店名(必須)">
+                <option selected>支店を選んでください</option>
+                <option value="○○支店">○○支店</option>
+                <option value="▲▲支店">▲▲支店</option>
+                <option value="××支店">××支店</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="bs-component">
+            <div class="form-group">
+              <label class="col-form-label" for="name">お名前</label>
+              <input type="text" class="form-control" placeholder="お名前を入力してください" id="name" name="お名前(必須)">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1">
+          <div class="bs-component">
+            <label class="col-form-label" for="inputDefault">&nbsp;</label><br />
+            <input type="submit" value="送信する" class="btn btn-lg btn-primary" />
           </div>
         </div>
       </div>
-      <div class="col-lg-4">
-        <div class="bs-component">
-          <div class="form-group">
-            <label class="col-form-label" for="name">お名前</label>
-            <input type="text" class="form-control" placeholder="お名前を入力してください" id="name" name="お名前(必須)" >
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 offset-lg-1">
-        <div class="bs-component">
-          <label class="col-form-label" for="inputDefault">&nbsp;</label><br />
-          <button type="submit" class="btn btn-lg btn-primary">送信する</button>
-        </div>
-      </div>
-    </div>
+
+    </form>
 
   </div>
 
@@ -567,6 +571,9 @@
       </div>
     </div>
   </footer>
+
+  <script type="text/javascript" src="mailform/mailform.js" charset="utf-8"></script>
+  <script type="text/javascript" src="mailform/postcodes/get.cgi?js" charset="utf-8"></script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
