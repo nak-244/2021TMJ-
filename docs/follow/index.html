@@ -95,6 +95,48 @@
         </div>
       </div>
 
+      <!-- 登録支店・氏名
+  ================================================== -->
+      <section class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h4 id="forms">登録支店・氏名登録</h4>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-lg-3">
+            <div class="bs-component">
+              <div class="form-group">
+                <label class="col-form-label">登録支店名</label>
+                <select class="custom-select" name="登録支店名(必須)">
+                  <option value="">支店を選んでください</option>
+                  <option value="CRM札幌支店">CRM札幌支店</option>
+                  <option value="CRM新宿支店">CRM新宿支店</option>
+                  <option value="CRM秋葉原支店">CRM秋葉原支店</option>
+                  <option value="CRM横浜支店">CRM横浜支店</option>
+                  <option value="名古屋支店">名古屋支店</option>
+                  <option value="北九州支店">北九州支店</option>
+                  <option value="CRM福岡支店">CRM福岡支店</option>
+                  <option value="熊本支店">熊本支店</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="form-group">
+                <label class="col-form-label" for="name">お名前</label>
+                <input type="text" class="form-control" placeholder="お名前を入力してください" id="name" name="お名前(必須)">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
       <!-- 就業先（現場）に関する質問
   ================================================== -->
       <section class="bs-docs-section">
@@ -526,38 +568,11 @@
       <div class="row my-4">
         <div class="col-12">
           <p class="lead">ご協力ありがとうございました。</p>
-          <p class="lead">最後にご登録頂いてる支店名と、お名前をご入力ください。</p>
         </div>
       </div>
 
       <div class="row mb-5">
-        <div class="col-lg-3">
-          <div class="bs-component">
-            <div class="form-group">
-              <label class="col-form-label">登録支店名</label>
-              <select class="custom-select" name="登録支店名(必須)">
-                <option value="">支店を選んでください</option>
-                <option value="CRM札幌支店">CRM札幌支店</option>
-                <option value="CRM新宿支店">CRM新宿支店</option>
-                <option value="CRM秋葉原支店">CRM秋葉原支店</option>
-                <option value="CRM横浜支店">CRM横浜支店</option>
-                <option value="名古屋支店">名古屋支店</option>
-                <option value="北九州支店">北九州支店</option>
-                <option value="CRM福岡支店">CRM福岡支店</option>
-                <option value="熊本支店">熊本支店</option>
-              </select>
-            </div>
-          </div>
-        </div>
         <div class="col-lg-4">
-          <div class="bs-component">
-            <div class="form-group">
-              <label class="col-form-label" for="name">お名前</label>
-              <input type="text" class="form-control" placeholder="お名前を入力してください" id="name" name="お名前(必須)">
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 offset-lg-1">
           <div class="bs-component">
             <label class="col-form-label" for="inputDefault">&nbsp;</label><br />
             <input type="submit" value="送信する" class="btn btn-lg btn-primary" />
